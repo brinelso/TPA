@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Juros Compostos</h1>
+        <div class="form-container">
+            <form id="calculatorForm">
+                <label for="initialAmount">Valor Inicial (R$):</label>
+                <input type="number" id="initialAmount" step="0.01" required>
+                
+                <label for="monthlyContribution">Aporte Mensal (R$):</label>
+                <input type="number" id="monthlyContribution" step="0.01" required>
+                
+                <label for="interestRate">Taxa de Juros Mensal (%):</label>
+                <input type="number" id="interestRate" step="0.01" required>
+                
+                <label for="period">Período (meses):</label>
+                <input type="number" id="period" required>
+                
+                <button type="button" onclick="calculate()">Calcular</button>
+                <button type="button" onclick="clearFormAndTable()">Limpar</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Saldo (R$)</th>
+                        <th>Lucro (R$)</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody">
+                    <!-- Resultados aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
